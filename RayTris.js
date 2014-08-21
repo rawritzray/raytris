@@ -1,15 +1,12 @@
 function addRow(tableID) {
-	var tableRef = document.getElementById(tableID);
+    var tableRef = document.getElementById(tableID);
 
-	for (var i = 0; i <10; i++) {
-		var row = document.createElement("tr");
-		var cell = document.createElement("td");
-	
-	var rowRef = document.querySelectorAll("td");
+    for (var i = 0; i <10; i++) {
+        var newRow = tableRef.insertRow();
+        var newCell = newRow.insertCell();
+    }
+}
 
-	rowRef.border = "1";
-	rowRef.width = "25px";
-	rowRef.height = "25px";
-
-addRow("board");
-
+window.onload = function() {
+    addRow("board");
+}
